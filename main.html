@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+  <title>Aimad's Proxy Server</title>
+  
+     <style type = "text/css">
+  
+  * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image:url('/static/bg.jpg');
+  background-color:#cccccc;
+  font-family: sans-serif;
+	margin: 0px;
+	padding: 8px;
+	color: #000000;
+}
+
+#header {
+  text-align: center;
+	font-size: 40px;
+	letter-spacing: 10px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	color: #626262
+	
+}
+
+#wrapper {
+  width: 100%;
+}
+
+#container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+}
+
+#form_wrapper {
+  margin-top: 10px;
+  width: 100%;
+}
+
+#input_wrapper {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#http_prefix {
+  vertical-align: middle;
+  color:#949090
+ 
+}
+
+#go_button {
+  width: 65px;
+  vertical-align: middle;
+  border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color:#ededed;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+}
+
+#go_button:hover {
+	background-color:#dfdfdf;
+}
+
+#go_button:active {
+	position:relative;
+	top:1px;
+}
+
+#url_entry {
+  width: 375px;
+  border: 2px dashed black;
+  padding: 3px;
+  margin-left: 3px;
+  margin-right: 10px;
+	font-family: arial,helvetica,sans-serif;
+	font-weight: normal;
+	color: #000000;
+	font-size: 14px;
+	
+}
+
+#warning {
+  font-size: 17px;
+  margin-top: 20px;
+  letter-spacing: 3px;
+  color: #000000;
+}
+
+#recent {
+	margin-top: 50px;
+}
+
+#recent_entries {
+  margin-left: 25px;
+}
+
+.url_container {
+	margin-top: 3px;
+	padding-left: 5px;
+}
+
+.info {
+	font-family: sans-serif;
+	font-size: 15px;
+	color: #606060;
+	margin-left: 5px;
+}
+
+.url {
+	font-size: 12px;
+}
+
+.url1 { color: #000000 !important; }
+.url2 { color: #0a0a0a !important; }
+.url3 { color: #151515 !important; }
+.url4 { color: #1f1f1f !important; }
+.url5 { color: #2a2a2a !important; }
+.url6 { color: #353535 !important; }
+.url7 { color: #3f3f3f !important; }
+.url8 { color: #4a4a4a !important; }
+.url9 { color: #555555 !important; }
+.url10 { color: #5f5f5f !important; }
+.url11 { color: #6a6a6a !important; }
+.url12 { color: #757575 !important; }
+.url13 { color: #7f7f7f !important; }
+.url14 { color: #8a8a8a !important; }
+.url15 { color: #959595 !important; }
+.url16 { color: #9f9f9f !important; }
+.url17 { color: #aaaaaa !important; }
+.url18 { color: #b5b5b5 !important; }
+.url19 { color: #bfbfbf !important; }
+.url20 { color: #cacaca !important; }
+.url21 { color: #d5d5d5 !important; }
+.url22 { color: #dfdfdf !important; }
+.url23 { color: #eaeaea !important; }
+.url24 { color: #f5f5f5 !important; }
+.url25 { color: #ffffff !important; }
+
+/* secure link */
+.secure {
+  text-align: center;
+  margin-top: 50px;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+.secure img {
+  margin-bottom: -0.3em;
+  border: 0;
+}
+
+.secure a, .secure a:hover, .secure a:visited, .secure a:active {
+  color: #000;
+  text-decoration: none;
+}
+
+</style>
+  
+  <script type="text/javascript" charset="utf-8">
+    var activeColor = "#000000";
+    var disabledColor = "#959595";
+    var defaultValue = "type url here...";
+    
+    function loadBox() {
+      var box = document.getElementById("url_entry");
+      if (box.value != defaultValue) {
+        box.style.color = activeColor;
+      }
+    }
+    
+    function focusBox() {
+      var box = document.getElementById("url_entry");
+      if (box.value == defaultValue) {
+        box.value = "";
+        box.style.color = activeColor;
+      }
+    }
+    
+    function blurBox() {
+      var box = document.getElementById("url_entry");
+      if (box.value == "") {
+        box.style.color = disabledColor;
+        box.value = defaultValue;
+      }
+    }
+  </script>
+</head>
+<body onload="loadBox();">
+
+
+<div id="wrapper">
+<div id="container">
+
+
+<div id="header">
+  <span>Aimad's Proxy Server</span>
+</div>
+
+
+<div id="form_wrapper">
+  <form action="" method="get" accept-charset="utf-8">
+  <div id="input_wrapper">
+    <span id="http_prefix">http://</span><input onfocus="focusBox();" onblur="blurBox();" type="text" name="url" value="type url here..." id="url_entry"/><input id="go_button" type="submit" value="Go"/>
+  </div>
+  </form>
+
+  
+  
+  <div id="warning">
+  Instructions : Just Enter the URL and Press Enter or Click GO.
+  </div>
+</div>
+
+<div class="secure">
+  {% if secure_url %}<a href="https://aimad-proxyserver.appspot.com">{% endif %}<img src="/static/{% if secure_url %}no{% endif %}lock.png" width="16" height="16"> {% if secure_url %}Secure Mode Off</a>{% else %}Secure Mode On{% endif %}
+</div>
+
+</div>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1725949-3");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html>
