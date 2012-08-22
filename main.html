@@ -5,189 +5,7 @@
 <head>
   <title>Aimad's Proxy Server</title>
   
-     <style type = "text/css">
-  
-  * {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-image:url('/static/bg.jpg');
-  background-color:#cccccc;
-  font-family: sans-serif;
-	margin: 0px;
-	padding: 8px;
-	color: #000000;
-}
-
-#header {
-  text-align: center;
-	font-size: 40px;
-	letter-spacing: 10px;
-	margin-bottom: 40px;
-	margin-top: 40px;
-	color: #585858
-	font-weight : bold;
-	
-}
-
-#wrapper {
-  width: 100%;
-}
-
-#container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 600px;
-}
-
-#form_wrapper {
-  margin-top: 10px;
-  width: 100%;
-}
-
-#input_wrapper {
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#http_prefix {
-  vertical-align: middle;
-  color:#000000
-   font-family: sans-serif;
-    font-weight : bold;
-   
-  
- 
-}
-
-#go_button {
-	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
-	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-	background-color:#ededed;
-	-moz-border-radius:42px;
-	-webkit-border-radius:42px;
-	border-radius:42px;
-	border:2px solid #dcdcdc;
-	display:inline-block;
-	color:#777777;
-	font-family:arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:7px 19px;
-	text-decoration:none;
-	text-shadow:1px 1px 0px #ffffff;
-}
-
-#go_button:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
-	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
-	background-color:#dfdfdf;
-}
-
-#go_button:active {
-	position:relative;
-	top:1px;
-}
-
-#url_entry {
-  width: 360px;
-  border: 2px groove black;
-  padding: 3px;
-  margin-left: 3px;
-  margin-right: 10px;
-	font-family: arial,helvetica,sans-serif;
-	font-weight: normal;
-	color: #000000;
-	font-size: 14px;
-	
-}
-
-#warning {
-  font-size: 17px;
-  margin-top: 20px;
-  letter-spacing: 3px;
-  color: #000000;
-  font-weight : bold;
-  font-family: sans-serif;
-}
-
-#recent {
-	margin-top: 50px;
-}
-
-#recent_entries {
-  margin-left: 25px;
-}
-
-.url_container {
-	margin-top: 3px;
-	padding-left: 5px;
-}
-
-.info {
-	font-family: sans-serif;
-	font-size: 15px;
-	color: #606060;
-	margin-left: 5px;
-}
-
-.url {
-	font-size: 12px;
-}
-
-.url1 { color: #000000 !important; }
-.url2 { color: #0a0a0a !important; }
-.url3 { color: #151515 !important; }
-.url4 { color: #1f1f1f !important; }
-.url5 { color: #2a2a2a !important; }
-.url6 { color: #353535 !important; }
-.url7 { color: #3f3f3f !important; }
-.url8 { color: #4a4a4a !important; }
-.url9 { color: #555555 !important; }
-.url10 { color: #5f5f5f !important; }
-.url11 { color: #6a6a6a !important; }
-.url12 { color: #757575 !important; }
-.url13 { color: #7f7f7f !important; }
-.url14 { color: #8a8a8a !important; }
-.url15 { color: #959595 !important; }
-.url16 { color: #9f9f9f !important; }
-.url17 { color: #aaaaaa !important; }
-.url18 { color: #b5b5b5 !important; }
-.url19 { color: #bfbfbf !important; }
-.url20 { color: #cacaca !important; }
-.url21 { color: #d5d5d5 !important; }
-.url22 { color: #dfdfdf !important; }
-.url23 { color: #eaeaea !important; }
-.url24 { color: #f5f5f5 !important; }
-.url25 { color: #ffffff !important; }
-
-/* secure link */
-.secure {
-  text-align: center;
-  margin-top: 50px;
-  vertical-align: middle;
-  font-size: 20px;
-}
-
-.secure img {
-  margin-bottom: -0.3em;
-  border: 0;
-}
-
-.secure a, .secure a:hover, .secure a:visited, .secure a:active {
-  color: #000;
-  text-decoration: none;
-}
-
-</style>
+<link rel = "stylesheet" type = "text/css" href = "static/StyleSheet.css" />
   
   <script type="text/javascript" charset="utf-8">
     var activeColor = "#000000";
@@ -225,11 +43,28 @@ body {
 <div id="container">
 
 
-<div id="header">
-  <span>Aimad's Proxy Server</span>
+<div id = "Banner">
+
+<img src = "static/Banner.png" />
+
 </div>
 
+<ul id="nav">
+	<li><a href="https://github.com/aimad100/aimad-proxyserver">Source Code</a></li>
+	
+	<li><a href="http://aimadahsan.x10.mx/">My Website</a></li>
+	
+	<li><a href="static/error.html">Legal</a></li>
+	
+	
 
+	
+</ul>
+
+<div id="instruction"> 
+                  Welcome, Enter the URL below and Press Enter or Click GO. </div>
+				   
+				   </br>
 
 
 <div id="form_wrapper">
@@ -241,43 +76,27 @@ body {
 
  </br>
 </br>
-  
-  
-  <div id="warning">
-  Instructions : Just Enter the URL and Press Enter or Click GO.
-  
-  </br>
-  </br>
-  </br>
-  </br>
-  
-  The Project is Open-Sourced. You can Browse and Download the Source-Code <a href = "https://github.com/aimad100/aimad-proxyserver.git"> HERE! </a>
-  
-  
-  </div>
- </div>
 
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+<!--
+******************************************************************* Beginning of Script for Google+************************************************************************************************
+-->
 
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<div class="g-plusone" data-annotation="inline" data-width="300" data-href="http://aimadahsan.x10.mx" style = "margin-top : 80px;"></div>
+  
+ 
 <div class="secure">
   {% if secure_url %}<a href="https://aimad-proxyserver.appspot.com">{% endif %}<img src="/static/{% if secure_url %}no{% endif %}lock.png" width="16" height="16"> {% if secure_url %}Secure Mode Off</a>{% else %}Secure Mode On{% endif %}
 </div>
 
 </div>
-</div>
-
-</br>
-</br>
-
-<img src = "/static/cprt.png"> 
-
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -288,6 +107,10 @@ var pageTracker = _gat._getTracker("UA-1725949-3");
 pageTracker._initData();
 pageTracker._trackPageview();
 </script>
+
+<div id = "footer">
+
+&copy Copyright 2012, Aimad Ahsan. All Rights Reserved. </div>
 
 </body>
 </html>
